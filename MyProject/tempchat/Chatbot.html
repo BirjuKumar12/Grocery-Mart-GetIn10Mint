@@ -1,0 +1,42 @@
+# models.py
+from django.db import models
+
+class ChatMessage(models.Model):
+    message = models.TextField()
+    response = models.TextField()
+    is_bot = models.BooleanField(default=False)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.message[:50]}..."
+
+# views.py
+from django. Shortcuts import render
+from django.http import JsonResponse
+from .models import ChatMessage
+import JSON
+
+def chatbot_view(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        user_message = data.get('message')
+
+        # Here you can implement your chatbot logic
+        # For now, we'll just echo the message
+        bot_response = f"You said: {user_message}"
+
+        # Save to database
+        ChatMessage.objects.create(message=user_message, is_bot=False)
+        ChatMessage.objects.create(message=bot_response, is_bot=True)
+
+        return JsonResponse({'response': bot_response})
+
+    return render (request, 'chatbot.html')
+
+# urls.py
+from django.urls import path
+from .views import chatbot_view
+
+urlpatterns = [
+    path('chatbot/', chatbot_view, name='chatbot'),
+]

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/all.css' %}" rel="stylesheet"/>
+    <title>Title</title>
+    <style>
+        :root
+        {
+        --bgcolor:linear-gradient(60deg,#bbdefb,#26c6da);
+        --txtcolor:#FF8800;
+        }
+        .t1
+        {
+        font-size:14px;
+        }
+        .bg-mycolor
+        {
+        background:var(--bgcolor) !important;
+        }
+        .txt-mycolor
+        {
+        color:var(--txtcolor);
+        }
+        .fa-brands
+        {
+        border:1px solid white;
+        padding:.3%;
+        transition:all 1s;
+        }
+        .fa-brands:hover
+        {
+       transform:rotate(360deg);
+       transition:all 1s;
+       background:white;
+       color:#FF8800;
+        }
+        #menu
+        {
+        background:transparent !important;
+        }
+        #menu ul li a
+        {
+        color:white;
+        }
+        .ufooter
+        {
+        min-height:300px;
+
+        }
+        .bfooter
+        {
+        min-height:50px;
+        }
+         div.container-footer.w-container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+  padding-bottom: 40px;
+  padding-top: 70px;
+}
+
+div.container-footer.w-container:after {
+  clear: both;
+  content: " ";
+  display: table;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+div.container-footer.w-container:before {
+  content: " ";
+  display: table;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+div.w-row {
+  box-sizing: border-box;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+div.w-row:after {
+  clear: both;
+  content: " ";
+  display: table;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+div.w-row:before {
+  content: " ";
+  display: table;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+div.footer-column.w-clearfix.w-col.w-col-4 {
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  width: 33.3333%;
+}
+
+div.footer-column.w-clearfix.w-col.w-col-4:after {
+  clear: both;
+  content: " ";
+  display: table;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+div.footer-column.w-clearfix.w-col.w-col-4:before {
+  content: " ";
+  display: table;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+img.failory-logo-image {
+  border-width: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+h3.footer-failory-name {
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 24px;
+}
+
+p.footer-description-failory {
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: .5px;
+  line-height: 1.5em;
+  margin-bottom: 16px;
+  margin-top: 15px;
+}
+
+br {
+  box-sizing: border-box;
+}
+
+div.footer-column.w-col.w-col-8 {
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  width: 66.6667%;
+}
+
+div.w-col.w-col-8 {
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 66.6667%;
+}
+
+div.w-col.w-col-7.w-col-small-6.w-col-tiny-7 {
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 58.3333%;
+}
+
+h3.footer-titles {
+  box-sizing: border-box;
+  color: black;
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.1em;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-top: 24px;
+}
+
+p.footer-links {
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: .5px;
+  line-height: 1.8em;
+  margin-bottom: 16px;
+  margin-top: 2px;
+}
+
+a {
+  background-color: transparent;
+  box-sizing: border-box;
+  color: black;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-decoration: none;}
+
+span.footer-link {
+  box-sizing: border-box;
+  color:black;
+  font-weight: 300;
+}
+
+span.footer-link:hover {
+  color:red;
+  font-weight: 400;
+}
+
+    </style>
+</head>
+<body>
+<script src="{% static 'js/bootstrap.bundle.js'%}"></script>
+<div class="container-fluid">
+    <div class="row t1 text-center bg-mycolor text-light py-1">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fa-solid fa-phone"></i> +91,9608328632
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <i class="fa-solid fa-envelope"></i>
+            shiyaram644@gmail.com
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            An ISO Certified Software Company
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+               <i class="fa-brands fa-square-facebook fs-3"></i>
+               <i class="fa-brands fa-square-youtube fs-3"></i>
+               <i class="fa-brands fa-square-instagram fs-3"></i>
+               <i class="fa-brands fa-square-twitter fs-3"></i>
+               <i class="fa-brands fa-square-whatsapp fs-3"></i>
+
+        </div>
+    </div>
+    <div class="row t2">
+        <div class="col-sm-10 mx-auto">
+<div class="row py-3">
+    <div class="col-sm-4 fs-2">
+        GetIn<b class="txt-mycolor">10Mint
+        <i class="fa-solid fa-dolly"></i></b>
+    </div>
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-3 text-end pt-3">
+        {% if request.session.user %}
+<a href="/user/cartitems/" class="btn btn-sm bg-mycolor text-light">Cart
+<i class="fa-solid fa-cart-shopping"></i>
+    <b class="badge text-bg-light">{{request.session.cartitems}}</b>
+</a>
+        <a href="/user/orderslist/" class="btn btn-sm bg-mycolor text-light">My Orders
+<i class="fa-solid fa-truck-fast"></i>
+
+</a>
+        {% else %}
+
+<a href="/user/cartitems/" class="btn bg-mycolor text-light">Cart
+<i class="fa-solid fa-cart-shopping"></i>
+    <b class="badge text-bg-light">0</b>
+</a>
+
+        {% endif %}
+
+
+    </div>
+    <div class="col-sm-2">
+{% if request.session.user %}
+
+           <a href="/user/myprofile/">
+<img src="/{{request.session.userpic}}" style="max-height:45px;width:45px;"
+     class="img-thumbnail"><br/>{{request.session.username}}
+        </a>
+
+          {% else %}
+
+           <a href="#" class="nav-link disabled"> Default User
+<img src="{% static 'images/default.jpg'%}" style="max-height:45px;"
+     class="img-thumbnail">
+        </a>
+        <a href="wallet" class="nav-link display">
+            <i class="fa-thin fa-wallet"></i>
+        </a>
+
+          {% endif %}
+    </div>
+</div>
+    </div>
+        </div>
+    <div class="row t3" style="background:#FF8800 ">
+<div class="col-sm-8 mx-auto text-center">
+<!-- start a menu -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" >
+          <a class="nav-link active" aria-current="page" href="/user/index/"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/about/"><i class="fa-solid fa-address-card"></i> About Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/product/">Product</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/contact/"><i class="fa-solid fa-user"></i> Customer Support</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/user/signup/"><i class="fa-solid fa-user-plus"></i> Sign Up</a>
+              </li>
+
+           <li class="nav-item">
+          <a class="nav-link" href="/user/myprofile/"><i class="fa-regular fa-user"></i> My profile</a>
+              </li>
+              {% if request.session.user %}
+
+           <li class="nav-item">
+          <a class="nav-link" href="/user/signout/"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+        </li>
+              {% else %}
+
+           <li class="nav-item">
+          <a class="nav-link" href="/user/signin/"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-item" href="/user/Wallet"><i class="fa-solid fa-wallet"></i></i>Wallet</a>
+          </li>
+          {% endif %}
+
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+   <!-- end menu -->
+</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 py-3" style="min-height:500px;">
+{% block content %}
+  {% endblock %}
+        </div>
+        </div>
+     <div class="row ufooter bg-light">
+        <div class="w-row">
+    <div class="footer-column w-clearfix w-col w-col-4">
+        <img src="{% static 'images/logo.png'%}" alt="" width="482" height="250" class="failory-logo-image p-5">
+    </div>
+    <div class="footer-column w-col w-col-8">
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div class="w-row">
+            <div class="w-col w-col-7 w-col-small-6 w-col-tiny-7">
+              <h3 class="footer-titles">Useful Links</h3>
+              <p class="footer-links"><a href="/user/about/" target="_blank"><span class="footer-link">About<br></span></a><a href="">
+                  <span class="footer-link">Blog<br></span></a><a href=""><span class="footer-link">Press</span></a><span><br></span><a href=""><span class="footer-link">Contact<br></span></a><a href=""><span class="footer-link">Value<br></span></a><a href=""><span class="footer-link">Lead</span></a><strong><br></strong></p>
+            </div>
+            <div class="w-col w-col-5 w-col-small-6 w-col-tiny-5">
+              <h3 class="footer-titles">Other</h3>
+              <p class="footer-links"><a href=""><span class="footer-link">Sponsor Us!<br></span></a><a href=""><span class="footer-link">Privacy<br></span></a><a href=""><span class="footer-link"></span></a><a href=""><span class="footer-link">Terms<br></span></a><a href=""><span class="footer-link">FAQs</span></a><strong><br></strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="column-center-mobile w-col w-col-4">
+          <h3 class="footer-titles">Follow Us!</h3><br>
+              <i class="fa-brands fa-square-facebook fs-3"></i>
+               <i class="fa-brands fa-square-youtube fs-3"></i>
+               <i class="fa-brands fa-square-instagram fs-3"></i>
+               <i class="fa-brands fa-square-twitter fs-3"></i>
+               <i class="fa-brands fa-square-whatsapp fs-3"></i>
+        </div><br>
+            <div class="fs-5 text-dark">
+                <i class="fa-solid fa-location-dot"></i>
+               <b> Office Address</b> </br>
+                <span>
+                         Gurgoan, Near Railway station</br>
+                         Haryana, 122001</br>
+                </span>
+            </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="row bfooter bg-dark mt-1 fs-4 text-light text-center py-3">
+        <div class="col-sm-6">
+            <a href="" target="_blank" style="text-decoration:none;color:white;">
+            </a>
+        </div>
+        <div class="col-sm-6">
+            Designed & Developed By :<a>  </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
