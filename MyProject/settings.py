@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['grocery-mart-getin10mint.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 
