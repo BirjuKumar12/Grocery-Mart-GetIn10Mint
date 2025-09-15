@@ -11,12 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+ALLOWED_HOSTS = ["*"]
 
-ALLOWED_HOSTS = [
-    "grocery-mart-getin10mint.onrender.com",
-    "localhost",
-    "127.0.0.1"
-]
 
 
 
